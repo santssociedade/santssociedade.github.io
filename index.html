@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alares Internet | Internet que te leva mais longe</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.alaresinternet.com.br/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.alaresinternet.com.br/favicon.ico" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
         :root {
-            --primary-blue: #0052CC;
-            --accent-blue: #00AEEF;
+            --primary-purple: #6B46FF;
+            --light-purple: #8B6EFF;
         }
         
         body {
@@ -19,80 +25,66 @@
         }
         
         .hero-bg {
-            background: linear-gradient(rgba(0, 82, 204, 0.85), rgba(0, 82, 204, 0.9)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(107, 70, 255, 0.92), rgba(107, 70, 255, 0.95)), 
+                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
         }
         
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: #25D366;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            font-size: 30px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
             z-index: 50;
             transition: all 0.3s ease;
         }
         
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
         
-        .nav-link {
-            transition: all 0.3s ease;
+        .banner-card {
+            transition: all 0.4s ease;
         }
         
-        .nav-link:hover {
-            color: #00AEEF;
-        }
-        
-        .service-card {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
+        .banner-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
+
     <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <div class="flex items-center gap-3">
-                    <img src="https://seeklogo.com/images/A/alares-logo-0B5E0E0E0E-seeklogo.com.png" 
-                         alt="Logo Alares" 
-                         class="h-10 w-auto">
-                    <div>
-                        <span class="text-2xl font-bold text-[#0052CC]">Alares</span>
-                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Alares_Internet_logo.svg/512px-Alares_Internet_logo.svg.png" 
+                         alt="Logo Alares" class="h-11 w-auto">
                 </div>
                 
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#planos" class="nav-link text-gray-700 hover:text-[#0052CC]">Planos</a>
-                    <a href="#para-voce" class="nav-link text-gray-700 hover:text-[#0052CC]">Para Você</a>
-                    <a href="#empresas" class="nav-link text-gray-700 hover:text-[#0052CC]">Empresas</a>
-                    <a href="#suporte" class="nav-link text-gray-700 hover:text-[#0052CC]">Suporte</a>
+                    <a href="#atendimento" class="nav-link text-gray-700">Atendimento</a>
+                    <a href="#negocie" class="nav-link text-gray-700">Negocie</a>
+                    <a href="#suporte" class="nav-link text-gray-700">Suporte</a>
                 </div>
                 
                 <div class="flex items-center gap-4">
-                    <a href="tel:10600" 
-                       class="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#0052CC]">
-                        <i class="fas fa-phone"></i>
-                        <span>10600</span>
+                    <a href="tel:10600" class="hidden sm:flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-700 hover:text-[#6B46FF]">
+                        <i class="fas fa-phone"></i> 10600
                     </a>
-                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20planos%20Alares!', '_blank')"
-                            class="bg-[#25D366] text-white px-5 py-2.5 rounded-full flex items-center gap-2 font-medium hover:bg-green-600 transition-colors">
-                        <i class="fab fa-whatsapp text-lg"></i>
+                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486', '_blank')"
+                            class="bg-[#25D366] text-white px-6 py-3 rounded-full flex items-center gap-2 font-medium hover:bg-green-600">
+                        <i class="fab fa-whatsapp text-xl"></i>
                         <span class="hidden sm:inline">WhatsApp</span>
                     </button>
                 </div>
@@ -101,246 +93,96 @@
     </nav>
 
     <!-- Hero -->
-    <header class="hero-bg text-white py-24 md:py-32">
+    <header class="hero-bg text-white py-28 md:py-36">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="max-w-3xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Internet de <span class="text-[#00AEEF]">fibra óptica</span><br>que te leva mais longe
-                </h1>
-                <p class="text-xl md:text-2xl mb-10 text-gray-100">
-                    Conexão ultrarrápida, Wi-Fi 6 e suporte 24h para toda a família.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486&text=Quero%20contratar%20um%20plano%20Alares!', '_blank')"
-                            class="bg-white text-[#0052CC] hover:bg-gray-100 px-10 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 mx-auto sm:mx-0">
-                        <i class="fab fa-whatsapp"></i>
-                        Contratar agora
-                    </button>
-                    
-                    <button onclick="document.getElementById('planos').scrollIntoView({ behavior: 'smooth' })"
-                            class="border-2 border-white hover:bg-white/10 px-10 py-4 rounded-2xl font-semibold text-lg">
-                        Ver planos
-                    </button>
-                </div>
-                
-                <div class="mt-12 flex justify-center gap-8 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check text-green-400"></i>
-                        <span>Até 1 Giga</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check text-green-400"></i>
-                        <span>Wi-Fi 6</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check text-green-400"></i>
-                        <span>Sem fidelidade</span>
-                    </div>
-                </div>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Internet que te leva<br><span class="text-[#8B6EFF]">mais longe</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-gray-100">
+                Fibra óptica de alta velocidade com Wi-Fi 6 e suporte 24 horas.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <button onclick="document.getElementById('atendimento').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-white text-[#6B46FF] hover:bg-gray-100 px-10 py-5 rounded-3xl font-semibold text-lg">
+                    Falar com Atendimento
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Benefícios -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="w-16 h-16 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-bolt text-3xl text-[#0052CC]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Velocidade Real</h3>
-                    <p class="text-gray-600">Fibra óptica dedicada com velocidade simétrica garantida.</p>
-                </div>
-                
-                <div class="text-center service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="w-16 h-16 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-wifi text-3xl text-[#0052CC]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Wi-Fi 6 Premium</h3>
-                    <p class="text-gray-600">Cobertura total na sua casa com tecnologia de última geração.</p>
-                </div>
-                
-                <div class="text-center service-card bg-white p-8 rounded-3xl border border-gray-100">
-                    <div class="w-16 h-16 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-headset text-3xl text-[#0052CC]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Suporte 24h</h3>
-                    <p class="text-gray-600">Atendimento humano rápido e especializado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Planos -->
-    <section id="planos" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Escolha seu plano</h2>
-                <p class="text-xl text-gray-600">Internet fibra com os melhores preços da região</p>
+    <!-- Novos Banners - 2 Colunas -->
+    <section class="py-20 bg-white" id="atendimento">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900">Escolha como quer prosseguir</h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Plano 1 -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-200 service-card">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-semibold text-gray-800">300 Mega</h3>
-                        <div class="mt-4 mb-6">
-                            <span class="text-5xl font-bold text-[#0052CC]">R$ 89,90</span>
-                            <span class="text-sm text-gray-500">/mês</span>
-                        </div>
-                        <ul class="space-y-3 text-left mb-10">
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Wi-Fi 6 incluso</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Instalação grátis</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> App Alares</li>
-                        </ul>
-                        <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486&text=Quero%20o%20plano%20de%20300%20Mega!', '_blank')"
-                                class="w-full bg-[#0052CC] hover:bg-blue-700 text-white py-4 rounded-2xl font-semibold">
-                            Contratar por WhatsApp
-                        </button>
-                    </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1: Atendimento -->
+                <div class="banner-card bg-gradient-to-br from-[#6B46FF] to-[#7C5FFF] text-white rounded-3xl p-10 text-center">
+                    <i class="fas fa-headset text-6xl mb-6"></i>
+                    <h3 class="text-3xl font-bold mb-4">Atendimento</h3>
+                    <p class="text-lg mb-8 opacity-90">Fale agora com nossa equipe e tire todas as suas dúvidas.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20atendimento%20sobre%20planos%20Alares" 
+                       target="_blank"
+                       class="inline-block bg-white text-[#6B46FF] font-semibold px-10 py-4 rounded-2xl hover:bg-gray-100 transition">
+                        Iniciar Atendimento no WhatsApp
+                    </a>
                 </div>
                 
-                <!-- Plano 2 - Mais Popular -->
-                <div class="bg-white rounded-3xl p-8 border-2 border-[#0052CC] relative service-card scale-105">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#0052CC] text-white text-sm px-6 py-1 rounded-full font-medium">
-                        MAIS VENDIDO
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-3xl font-semibold text-[#0052CC]">600 Mega</h3>
-                        <div class="mt-4 mb-6">
-                            <span class="text-5xl font-bold text-[#0052CC]">R$ 119,90</span>
-                            <span class="text-sm text-gray-500">/mês</span>
-                        </div>
-                        <ul class="space-y-3 text-left mb-10">
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Ultra velocidade</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Wi-Fi 6 Mesh</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Suporte prioritário</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Alares Play TV</li>
-                        </ul>
-                        <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486&text=Quero%20o%20plano%20de%20600%20Mega!', '_blank')"
-                                class="w-full bg-[#0052CC] hover:bg-blue-700 text-white py-4 rounded-2xl font-semibold">
-                            Contratar por WhatsApp
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Plano 3 -->
-                <div class="bg-white rounded-3xl p-8 border border-gray-200 service-card">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-semibold text-gray-800">1 Giga</h3>
-                        <div class="mt-4 mb-6">
-                            <span class="text-5xl font-bold text-[#0052CC]">R$ 159,90</span>
-                            <span class="text-sm text-gray-500">/mês</span>
-                        </div>
-                        <ul class="space-y-3 text-left mb-10">
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Velocidade máxima</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> 2 roteadores inclusos</li>
-                            <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Suporte VIP</li>
-                        </ul>
-                        <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486&text=Quero%20o%20plano%20de%201%20Giga!', '_blank')"
-                                class="w-full bg-[#0052CC] hover:bg-blue-700 text-white py-4 rounded-2xl font-semibold">
-                            Contratar por WhatsApp
-                        </button>
-                    </div>
+                <!-- Card 2: Negocie -->
+                <div class="banner-card bg-gradient-to-br from-[#4F46E5] to-[#6B46FF] text-white rounded-3xl p-10 text-center">
+                    <i class="fas fa-handshake text-6xl mb-6"></i>
+                    <h3 class="text-3xl font-bold mb-4">Negocie</h3>
+                    <p class="text-lg mb-8 opacity-90">Negocie o melhor plano e condições especiais para você.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20negociar%20um%20plano%20com%20desconto!" 
+                       target="_blank"
+                       class="inline-block bg-white text-[#6B46FF] font-semibold px-10 py-4 rounded-2xl hover:bg-gray-100 transition">
+                        Negociar Plano Agora
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Atendimento -->
-    <section class="py-20 bg-[#0052CC] text-white">
+    <!-- Atendimento Rápido -->
+    <section id="suporte" class="py-16 bg-gray-900 text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Precisa de atendimento?</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20falar%20com%20o%20atendimento!" 
-                   target="_blank"
-                   class="bg-white/10 hover:bg-white/20 backdrop-blur p-8 rounded-3xl transition-all">
-                    <i class="fab fa-whatsapp text-5xl mb-4"></i>
-                    <h3 class="font-semibold text-xl mb-2">Atendimento Comercial</h3>
-                    <p class="text-blue-100">Contratação e dúvidas sobre planos</p>
-                    <p class="mt-4 text-sm opacity-75">(21) 96912-7486</p>
+            <h2 class="text-3xl font-bold mb-8">Outras formas de contato</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:10600" class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-2xl">
+                    <i class="fas fa-phone text-2xl"></i>
+                    <div>
+                        <p class="font-medium">Central 10600</p>
+                    </div>
                 </a>
-                
-                <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20preciso%20de%20suporte%20t%C3%A9cnico!" 
-                   target="_blank"
-                   class="bg-white/10 hover:bg-white/20 backdrop-blur p-8 rounded-3xl transition-all">
-                    <i class="fas fa-tools text-5xl mb-4"></i>
-                    <h3 class="font-semibold text-xl mb-2">Suporte Técnico</h3>
-                    <p class="text-blue-100">Problemas com conexão</p>
-                    <p class="mt-4 text-sm opacity-75">(21) 96912-7486</p>
-                </a>
-                
-                <a href="tel:10600" 
-                   class="bg-white/10 hover:bg-white/20 backdrop-blur p-8 rounded-3xl transition-all">
-                    <i class="fas fa-phone text-5xl mb-4"></i>
-                    <h3 class="font-semibold text-xl mb-2">Central 10600</h3>
-                    <p class="text-blue-100">Atendimento geral</p>
+                <a href="https://api.whatsapp.com/send?phone=5521969127486" target="_blank" 
+                   class="flex items-center gap-3 bg-[#25D366] hover:bg-green-600 px-8 py-4 rounded-2xl">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <div>
+                        <p class="font-medium">(21) 96912-7486</p>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-10">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="https://seeklogo.com/images/A/alares-logo-0B5E0E0E0E-seeklogo.com.png" 
-                             alt="Logo Alares" class="h-8 w-auto brightness-0 invert">
-                    </div>
-                    <p class="text-sm">Internet que te leva mais longe.</p>
-                    <p class="text-xs mt-6">© 2026 Alares Internet. Todos os direitos reservados.</p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Links Rápidos</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Planos Residenciais</a></li>
-                        <li><a href="#" class="hover:text-white">Alares Empresas</a></li>
-                        <li><a href="#" class="hover:text-white">App Alares</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Suporte</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="tel:10600" class="hover:text-white">10600</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=5521969127486" target="_blank" class="hover:text-white">(21) 96912-7486</a></li>
-                        <li><a href="#" class="hover:text-white">Central do Assinante</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-white mb-4">Siga-nos</h4>
-                    <div class="flex gap-4 text-2xl">
-                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-xs text-center">
-                Este é um site demonstrativo para fins de apresentação. 
-                <a href="https://www.alaresinternet.com.br" target="_blank" class="underline">Acesse o site oficial aqui</a>.
-            </div>
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Alares_Internet_logo.svg/512px-Alares_Internet_logo.svg.png" 
+                 alt="Logo Alares" class="h-9 mx-auto mb-6 opacity-75">
+            <p class="text-sm">© 2026 Alares Internet • Site demonstrativo</p>
         </div>
     </footer>
 
     <!-- Botão WhatsApp Flutuante -->
     <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20mais%20informações." 
-       target="_blank"
+       target="_blank" 
        class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        // Tailwind script already included via CDN
-        console.log('%c✅ Site Alares carregado com sucesso!', 'color: #0052CC; font-weight: bold');
-        
-        // Smooth scroll for mobile menu if needed in future
-    </script>
 </body>
 </html>
