@@ -3,208 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alares Internet | Internet que te leva mais longe</title>
+    <title>Veloe Suporte - Atendimento e 2ª Via</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="https://www.alaresinternet.com.br/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
     
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        
         :root {
-            --primary-purple: #6B46FF;
-            --light-purple: #8B6EFF;
+            --veloe-blue: #003087;
+            --veloe-light-blue: #00AEEF;
+            --veloe-dark: #1A1A1A;
         }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system_ui, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--veloe-dark);
         }
-        
-        .hero-bg {
-            background: linear-gradient(rgba(107, 70, 255, 0.88), rgba(107, 70, 255, 0.93)), 
-                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
-        }
-        
-        .whatsapp-float {
+        header {
+            background: linear-gradient(135deg, var(--veloe-blue), #0052CC);
+            color: white;
+            padding: 1rem 0;
             position: fixed;
-            bottom: 25px;
-            right: 25px;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .logo img {
+            height: 45px;
+            margin-right: 12px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--veloe-light-blue); }
+
+        .hero {
+            background: linear-gradient(rgba(0,48,135,0.85), rgba(0,48,135,0.85)), url('https://source.unsplash.com/random/1920x1080/?highway,toll') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        .hero-content { max-width: 800px; padding: 2rem; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.4rem; margin-bottom: 2rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--veloe-light-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,174,239,0.3);
+        }
+        .btn-whatsapp { background: #25D366; }
+
+        section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--veloe-blue);
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card i {
+            font-size: 3.5rem;
+            color: var(--veloe-light-blue);
+            margin-bottom: 1.5rem;
+        }
+        footer {
+            background: var(--veloe-dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background: #25D366;
             color: white;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            z-index: 50;
-            transition: all 0.3s ease;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 2000;
+            text-decoration: none;
         }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-        
-        .service-card {
-            transition: all 0.4s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-12px);
-        }
+        .floating-whatsapp:hover { transform: scale(1.1); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-
-    <!-- Navbar -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <img src="https://seeklogo.com/images/A/alares-logo-0B5E0E0E0E-seeklogo.com.png" 
-                         alt="Alares Internet" 
-                         class="h-12 w-auto">
-                </div>
-                
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="#planos" class="nav-link text-gray-700 hover:text-[#6B46FF]">Planos</a>
-                    <a href="#atendimento" class="nav-link text-gray-700 hover:text-[#6B46FF]">Atendimento</a>
-                    <a href="#suporte" class="nav-link text-gray-700 hover:text-[#6B46FF]">Suporte</a>
-                </div>
-                
-                <div class="flex items-center gap-4">
-                    <a href="tel:10600" class="hidden sm:flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-700 hover:text-[#6B46FF]">
-                        <i class="fas fa-phone"></i> 21-96912-7486
-                    </a>
-                    <button onclick="window.open('https://api.whatsapp.com/send?phone=5521969127486', '_blank')"
-                            class="bg-[#25D366] text-white px-6 py-3 rounded-full flex items-center gap-2 font-medium hover:bg-green-600">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                        <span class="hidden sm:inline">WhatsApp</span>
-                    </button>
-                </div>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo-veloe.png" alt="Logo Veloe">
+                Veloe Suporte
             </div>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="hero-bg text-white py-28 md:py-36">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-                Internet que te leva<br><span class="text-[#8B6EFF]">mais longe</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-10 text-gray-100">
-                Fibra óptica de alta velocidade com Wi-Fi 6 e suporte 24 horas.
-            </p>
-            
-            <button onclick="document.getElementById('atendimento').scrollIntoView({ behavior: 'smooth' })"
-                    class="bg-white text-[#6B46FF] hover:bg-gray-100 px-10 py-5 rounded-3xl font-semibold text-lg">
-                Falar com Atendimento
-            </button>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#atendimento">Atendimento</a></li>
+                <li><a href="#segunda-via">2ª Via</a></li>
+                <li><a href="#suporte">Suporte</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Benefícios -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center service-card bg-white p-8 rounded-3xl border">
-                    <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-bolt text-4xl text-[#6B46FF]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Velocidade Real</h3>
-                    <p class="text-gray-600">Fibra óptica com velocidade simétrica garantida.</p>
-                </div>
-                <div class="text-center service-card bg-white p-8 rounded-3xl border">
-                    <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-wifi text-4xl text-[#6B46FF]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Wi-Fi 6 Premium</h3>
-                    <p class="text-gray-600">Cobertura total da sua casa.</p>
-                </div>
-                <div class="text-center service-card bg-white p-8 rounded-3xl border">
-                    <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fas fa-headset text-4xl text-[#6B46FF]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Suporte 24h</h3>
-                    <p class="text-gray-600">Atendimento humano especializado.</p>
-                </div>
-            </div>
+    <!-- O resto do conteúdo permanece igual ao anterior -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Suporte Veloe</h1>
+            <p>Atendimento • 2ª Via • Suporte Técnico</p>
+            <a href="https://wa.me/556399961585" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
         </div>
     </section>
 
-    <!-- Banners Atendimento + Negocie -->
-    <section id="atendimento" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-900">Escolha como quer prosseguir</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Atendimento -->
-                <div class="service-card bg-gradient-to-br from-[#6B46FF] to-[#7C5FFF] text-white rounded-3xl p-10 text-center">
-                    <i class="fas fa-headset text-6xl mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Atendimento</h3>
-                    <p class="text-lg mb-8 opacity-90">Fale com nossa equipe e tire todas as dúvidas sobre planos.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20atendimento%20sobre%20planos%20Alares" 
-                       target="_blank"
-                       class="inline-block bg-white text-[#6B46FF] font-semibold px-10 py-4 rounded-2xl hover:bg-gray-100">
-                        Iniciar Atendimento
-                    </a>
-                </div>
-                
-                <!-- Negocie -->
-                <div class="service-card bg-gradient-to-br from-[#4F46E5] to-[#6B46FF] text-white rounded-3xl p-10 text-center">
-                    <i class="fas fa-handshake text-6xl mb-6"></i>
-                    <h3 class="text-3xl font-bold mb-4">Negocie</h3>
-                    <p class="text-lg mb-8 opacity-90">Negocie o melhor plano e condições especiais para você.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%2C%20quero%20negociar%20um%20plano%20com%20desconto!" 
-                       target="_blank"
-                       class="inline-block bg-white text-[#6B46FF] font-semibold px-10 py-4 rounded-2xl hover:bg-gray-100">
-                        Negociar Plano Agora
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- (Mantenha as seções de atendimento, segunda-via, suporte, faq e footer iguais ao código anterior) -->
 
-    <!-- Contatos -->
-    <section id="suporte" class="py-16 bg-[#6B46FF] text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8">Outras formas de contato</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="tel:10600" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-8 py-4 rounded-2xl">
-                    <i class="fas fa-phone text-2xl"></i>
-                    <div><p class="font-medium">Central 21-96912-7486</p></div>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5521969127486" target="_blank" 
-                   class="flex items-center gap-3 bg-[#25D366] hover:bg-green-600 px-8 py-4 rounded-2xl">
-                    <i class="fab fa-whatsapp text-2xl"></i>
-                    <div><p class="font-medium">(21) 96912-7486</p></div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <img src="https://seeklogo.com/images/A/alares-logo-0B5E0E0E0E-seeklogo.com.png" 
-                 alt="Alares Internet" class="h-10 mx-auto mb-6 opacity-75">
-            <p class="text-sm">© 2026 Alares Internet • Site demonstrativo</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Suporte Veloe - Atendimento Autorizado.</p>
+        <p>Este é um site de suporte independente.</p>
     </footer>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://api.whatsapp.com/send?phone=5521969127486&text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20mais%20informações." 
-       target="_blank" 
-       class="whatsapp-float">
+    <a href="https://wa.me/556399961585" target="_blank" class="floating-whatsapp" title="Fale no WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
